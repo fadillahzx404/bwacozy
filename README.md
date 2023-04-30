@@ -1,16 +1,28 @@
-# bwa_cozy
+# Bwa_cozy
 
-A new Flutter project.
+Building iOS and Android apps can be prohibitively expensive for a startup. Because of this we can use the Flutter SDK to create iOS and Android apps in just one coding session (saving on costs and time). In this class, we will learn together from the basics to build applications that help people find boarding houses around the world. This application is also integrated with the API to store important data such as boarding info, and others.
 
-## Getting Started
+If you are currently learning Flutter from scratch, then this class is perfect because we will also learn about how to implement designs in Figma into code using the Flutter SDK and Visual Studio Code and Dart. Please join and we will be waiting in class.
 
-This project is a starting point for a Flutter application.
+This flutter project from course buildwithangga you can check detail on here https://buildwithangga.com/kelas/dart-flutter-development-bootcamp-find-house-app.
 
-A few resources to get you started if this is your first Flutter project:
+I build this app with the dart language and flutter framework with many depedencies:
+dependencies:
+  cupertino_icons: ^1.0.2
+  url_launcher: ^6.1.5
+  http: ^0.13.5
+  provider: ^6.0.3
+  cached_network_image: ^3.2.1
+  flutter_launcher_icons: ^0.10.0
+  flutter:
+    sdk: flutter
+  google_fonts: ^3.0.1
+  
+I'm use the API from buildwithangga to, the API is private just only for the student take this course.
+And you can tester the app on this link https://appdistribution.firebase.dev/i/756e3aba61348170
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+For the view of apps
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1682862593](https://user-images.githubusercontent.com/76970535/235357928-e2a950ba-a0b6-4843-bc47-fd8e5fbf548d.png)
+![Screenshot_1682862608](https://user-images.githubusercontent.com/76970535/235357942-51dbdb7d-e14f-4971-b50b-1e5d7f5be816.png)
+![Uploading Screenshot_1682862615.png…]()
