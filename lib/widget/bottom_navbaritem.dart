@@ -2,33 +2,36 @@ import 'package:bwa_cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavbarItem extends StatelessWidget {
-  final String ImageUrl;
-  final bool IsActive;
+  
+  final bool isActive;
+  final Icon icon;
 
-  BottomNavbarItem({required this.ImageUrl, required this.IsActive});
+  const BottomNavbarItem(
+      {super.key, required this.icon, required this.isActive});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Spacer(),
-        Image.asset(
-          ImageUrl,
-          width: 26,
+        Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: icon,
         ),
-        Spacer(),
-        IsActive
+        const Spacer(),
+        isActive
             ? Container(
                 width: 30,
                 height: 2,
                 decoration: BoxDecoration(
                   color: purpleColor,
-                  borderRadius: BorderRadius.vertical(
+                  borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(1000),
                   ),
                 ),
               )
-            : Container(),
+            : Container(
+                color: greyColor,
+              ),
       ],
     );
   }

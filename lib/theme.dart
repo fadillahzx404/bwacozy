@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 //COLOR
 
-Color purpleColor = Color(0xff5843BE);
-Color orangeColor = Color(0xffFF9376);
-Color blackColor = Color(0xff000000);
-Color whiteColor = Color(0xffffffff);
-Color greyColor = Color(0xff82868E);
+Color purpleColor = const Color(0xff5843BE);
+Color orangeColor = const Color(0xffFF9376);
+Color blackColor = const Color(0xff000000);
+Color whiteColor = const Color(0xffffffff);
+Color greyColor = const Color(0xff82868E);
 
 //Paddd
 

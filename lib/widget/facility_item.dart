@@ -7,7 +7,7 @@ class FacilityItem extends StatelessWidget {
   final int total;
   final String name;
 
-  FacilityItem({required this.imageUrl,required this.total, required this.name,});
+  const FacilityItem({super.key, required this.imageUrl,required this.total, required this.name,});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class FacilityItem extends StatelessWidget {
           imageUrl,
           width: 32,
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text.rich(

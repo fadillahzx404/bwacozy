@@ -7,11 +7,11 @@ import 'package:bwa_cozy/models/space.dart';
 class SpaceProvider extends ChangeNotifier {
   getRecomendedSpaces() async {
     var result = await http.get(
-      Uri.parse('https://bwa-cozy.herokuapp.com/recommended-spaces'),
+      Uri.parse('https://bwa-cozy-api.vercel.app/recommended-spaces'),
     );
 
-    print(result.statusCode);
-    print(result.body);
+    // print(result.statusCode);
+    // print(result.body);
 
     if (result.statusCode == 200) {
       List data = jsonDecode(result.body);

@@ -3,6 +3,8 @@ import 'package:bwa_cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {
+  const SplashPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,45 +26,48 @@ class SplashPage extends StatelessWidget {
                   Container(
                     height: 50,
                     width: 50,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('assets/images/logo.png'),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Text(
                     'Find Cozy House\nto Stay and Happy',
                     style: blackTextStyle.copyWith(fontSize: 24),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
                     'Stop membuang banyak waktu\npada tempat yang tidak habitable',
                     style: greyTextStyle.copyWith(fontSize: 16),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
-                  Container(
+                  SizedBox(
                     width: 210,
                     height: 50,
-                    child: RaisedButton(
+                    
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: purpleColor,
+                          shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(17)))),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                            builder: (context) => const HomePage(),
                           ),
                         );
                       },
-                      color: purpleColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(17),
-                      ),
+                      
                       child: Text(
                         'Explore Now',
                         style: whiteTextStyle.copyWith(
@@ -77,6 +82,7 @@ class SplashPage extends StatelessWidget {
           ],
         ),
       ),
+      
     );
   }
 }

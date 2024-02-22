@@ -1,6 +1,9 @@
 import 'package:bwa_cozy/models/city.dart';
 import 'package:bwa_cozy/models/space.dart';
 import 'package:bwa_cozy/models/tips.dart';
+import 'package:bwa_cozy/pages/favorite_page.dart';
+import 'package:bwa_cozy/pages/inbox_page.dart';
+import 'package:bwa_cozy/pages/wallet_page.dart';
 import 'package:bwa_cozy/providers/space_providers.dart';
 import 'package:bwa_cozy/theme.dart';
 import 'package:bwa_cozy/widget/bottom_navbaritem.dart';
@@ -11,6 +14,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     var spaceProvider = Provider.of<SpaceProvider>(context);
@@ -19,7 +24,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: whiteColor,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             left: 24,
           ),
           child: ListView(
@@ -34,7 +39,7 @@ class HomePage extends StatelessWidget {
                   fontSize: 24,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 2,
               ),
               Text(
@@ -43,7 +48,7 @@ class HomePage extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               // NOTE: POPULAR CITIES
@@ -53,10 +58,10 @@ class HomePage extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
-              Container(
+              SizedBox(
                 height: 150,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -65,7 +70,7 @@ class HomePage extends StatelessWidget {
                         id: 1,
                         name: 'Jakarta',
                         ImageUrl: 'assets/images/city1.png')),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     CityCard(City(
@@ -74,21 +79,21 @@ class HomePage extends StatelessWidget {
                       ImageUrl: 'assets/images/city2.png',
                       isPopular: true,
                     )),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     CityCard(City(
                         id: 3,
                         name: 'Surabaya',
                         ImageUrl: 'assets/images/city3.png')),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     CityCard(City(
                         id: 4,
                         name: 'Palembang',
                         ImageUrl: 'assets/images/city4.png')),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     CityCard(City(
@@ -97,7 +102,7 @@ class HomePage extends StatelessWidget {
                       ImageUrl: 'assets/images/city5.png',
                       isPopular: true,
                     )),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     CityCard(City(
@@ -107,7 +112,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               // NOTE: RECOMENDED SPACE
@@ -117,7 +122,7 @@ class HomePage extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               FutureBuilder(
@@ -141,13 +146,13 @@ class HomePage extends StatelessWidget {
                     );
                   }
 
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 },
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               // NOTE: TIPS & GUIDANCE
@@ -157,7 +162,7 @@ class HomePage extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Column(
@@ -169,7 +174,7 @@ class HomePage extends StatelessWidget {
                         title: 'City Guidelines',
                         UpdatedAt: '20 Apr'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   TipsCard(
@@ -193,27 +198,74 @@ class HomePage extends StatelessWidget {
         height: 65,
         width: MediaQuery.of(context).size.width - (2 * edge),
         decoration: BoxDecoration(
-          color: Color(0xffF6F7F8),
+          color: const Color(0xffF6F7F8),
           borderRadius: BorderRadius.circular(23),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            BottomNavbarItem(
-              ImageUrl: 'assets/images/icon_home.png',
-              IsActive: true,
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                side: BorderSide.none,
+              ),
+              onPressed: () {},
+              child: const BottomNavbarItem(
+                icon: Icon(
+                  Icons.home_rounded,
+                ),
+                isActive: true,
+              ),
             ),
-            BottomNavbarItem(
-              ImageUrl: 'assets/images/icon_email.png',
-              IsActive: false,
+            OutlinedButton(
+              onPressed: () => Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: ((context, animation, secondaryAnimation) =>
+                          const InboxPage()))),
+              style: OutlinedButton.styleFrom(
+                side: BorderSide.none,
+              ),
+              child: BottomNavbarItem(
+                icon: Icon(
+                  Icons.email_rounded,
+                  color: greyColor,
+                ),
+                isActive: false,
+              ),
             ),
-            BottomNavbarItem(
-              ImageUrl: 'assets/images/icon_card.png',
-              IsActive: false,
+            OutlinedButton(
+              onPressed: () => Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: ((context, animation, secondaryAnimation) =>
+                          const WalletPage()))),
+              style: OutlinedButton.styleFrom(
+                side: BorderSide.none,
+              ),
+              child: BottomNavbarItem(
+                icon: Icon(
+                  Icons.wallet_rounded,
+                  color: greyColor,
+                ),
+                isActive: false,
+              ),
             ),
-            BottomNavbarItem(
-              ImageUrl: 'assets/images/icon_love.png',
-              IsActive: false,
+            OutlinedButton(
+              onPressed: () => Navigator.pushReplacement(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: ((context, animation, secondaryAnimation) =>
+                          const FavoritePage()))),
+              style: OutlinedButton.styleFrom(
+                side: BorderSide.none,
+              ),
+              child: BottomNavbarItem(
+                icon: Icon(
+                  Icons.favorite,
+                  color: greyColor,
+                ),
+                isActive: false,
+              ),
             ),
           ],
         ),

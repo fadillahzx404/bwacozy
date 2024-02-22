@@ -9,7 +9,7 @@ import 'package:bwa_cozy/models/space.dart';
 class DetailPage extends StatefulWidget {
   final Space space;
 
-  DetailPage(this.space);
+  const DetailPage(this.space, {super.key});
 
   @override
   State<DetailPage> createState() => _DetailPageState();
@@ -20,14 +20,14 @@ class _DetailPageState extends State<DetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    launchUrl(String url) async {
-      if (!await canLaunch(url)) {
-        await launch(url);
+    launchUrl(Uri url) async {
+      if (!await canLaunchUrl(url)) {
+        await launchUrl(url);
       } else {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ErrorPage(),
+            builder: (context) => const ErrorPage(),
           ),
         );
       }
@@ -46,13 +46,13 @@ class _DetailPageState extends State<DetailPage> {
             ),
             ListView(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 328,
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.vertical(
+                    borderRadius: const BorderRadius.vertical(
                       top: Radius.circular(20),
                     ),
                     color: whiteColor,
@@ -60,7 +60,7 @@ class _DetailPageState extends State<DetailPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       // NOTE: TITLE
@@ -78,7 +78,7 @@ class _DetailPageState extends State<DetailPage> {
                                     fontSize: 22,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 2,
                                 ),
                                 Text.rich(
@@ -102,7 +102,7 @@ class _DetailPageState extends State<DetailPage> {
                             Row(
                               children: [1, 2, 3, 4, 5].map((index) {
                                 return Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     left: 2.0,
                                   ),
                                   child: RatingItem(
@@ -114,7 +114,7 @@ class _DetailPageState extends State<DetailPage> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       // NOTE: MAIN FACILITIES
@@ -127,7 +127,7 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
                       Padding(
@@ -150,7 +150,7 @@ class _DetailPageState extends State<DetailPage> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       // NOTE: PHOTOS
@@ -163,16 +163,16 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
-                      Container(
+                      SizedBox(
                         height: 88,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: widget.space.photos.map((item) {
                             return Container(
-                              margin: EdgeInsets.only(
+                              margin: const EdgeInsets.only(
                                 left: 24,
                               ),
                               child: ClipRRect(
@@ -190,7 +190,7 @@ class _DetailPageState extends State<DetailPage> {
                           }).toList(),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       // NOTE: LOCATION
@@ -218,8 +218,9 @@ class _DetailPageState extends State<DetailPage> {
                               onTap: () {
                                 // launchUrl(
                                 //     'https://goo.gl/maps/1GvpqPsR5dA9ZBcF7');
-
-                                launchUrl(widget.space.mapUrl);
+                                String mapingurl = widget.space.mapUrl;
+                                Uri uri = Uri.parse(mapingurl);
+                                launchUrl(uri);
                               },
                               child: Image.asset(
                                 'assets/images/btn_location.png',
@@ -229,7 +230,7 @@ class _DetailPageState extends State<DetailPage> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                       Container(
@@ -238,7 +239,11 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                         height: 50,
                         width: MediaQuery.of(context).size.width - (2 * edge),
-                        child: RaisedButton(
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                              backgroundColor: purpleColor,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(17))),
                           onPressed: () => showDialog(
                             context: context,
                             builder: (BuildContext context) => AlertDialog(
@@ -246,7 +251,7 @@ class _DetailPageState extends State<DetailPage> {
                                 'Hallo pencari kost',
                                 style: blackTextStyle,
                               ),
-                              content: Text(
+                              content: const Text(
                                   'Apakah anda yakin ingin menelpon pemilik kost ?'),
                               actions: <Widget>[
                                 TextButton(
@@ -267,7 +272,10 @@ class _DetailPageState extends State<DetailPage> {
                                 ),
                                 TextButton(
                                   onPressed: () {
-                                    launchUrl('tel:${widget.space.phone}');
+                                    String tel = widget.space.mapUrl;
+                                    Uri uri = Uri.parse(tel);
+                                    launchUrl(uri);
+                                    
                                   },
                                   child: Container(
                                     width: 70,
@@ -286,10 +294,6 @@ class _DetailPageState extends State<DetailPage> {
                               ],
                             ),
                           ),
-                          color: purpleColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(17),
-                          ),
                           child: Text(
                             'Book Now',
                             style: whiteTextStyle.copyWith(
@@ -298,7 +302,7 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                     ],

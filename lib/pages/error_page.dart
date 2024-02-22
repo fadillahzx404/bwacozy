@@ -3,6 +3,8 @@ import 'package:bwa_cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class ErrorPage extends StatelessWidget {
+  const ErrorPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +17,7 @@ class ErrorPage extends StatelessWidget {
                 'assets/images/error.png',
                 width: 300,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 70,
               ),
               Text(
@@ -24,7 +26,7 @@ class ErrorPage extends StatelessWidget {
                   fontSize: 24,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Text(
@@ -34,25 +36,26 @@ class ErrorPage extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
-              Container(
+              SizedBox(
                 width: 210,
                 height: 50,
-                child: RaisedButton(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: purpleColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17))),
                   onPressed: () {
                     Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePage(),
+                          builder: (context) => const HomePage(),
                         ),
                         (route) => false);
                   },
-                  color: purpleColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(17),
-                  ),
+                  
                   child: Text(
                     'Back to Home',
                     style: whiteTextStyle.copyWith(
