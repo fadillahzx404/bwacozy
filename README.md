@@ -31,7 +31,7 @@ And you can tester the app on this link https://appdistribution.firebase.dev/i/7
 
 ### The pages build by my self
 <p float="left">
-<img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/dc606f24-f5fa-4176-be61-fe3f49306c4d" width=250 />
+<img src="https://user-images.githubusercontent.com/76970535/dc606f24-f5fa-4176-be61-fe3f49306c4d" width=250 />
 <img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/ebefc245-300b-49e7-9eec-bf32c0333699" width=250 />
 <img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/06a55610-c064-4b52-8f29-2eb730b5fb31" width=250 />
 </p>
