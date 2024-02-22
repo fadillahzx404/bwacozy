@@ -7,6 +7,7 @@ If you are currently learning Flutter from scratch, then this class is perfect b
 This flutter project from course buildwithangga you can check detail on here https://buildwithangga.com/kelas/dart-flutter-development-bootcamp-find-house-app.
 
 I build this app with the dart language and flutter framework with many depedencies:
+
 dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.5
@@ -23,6 +24,6 @@ And you can tester the app on this link https://appdistribution.firebase.dev/i/7
 
 For the view of apps
 
-![Screenshot_1682862593](https://user-images.githubusercontent.com/76970535/235357928-e2a950ba-a0b6-4843-bc47-fd8e5fbf548d.png)
-![Screenshot_1682862608](https://user-images.githubusercontent.com/76970535/235357942-51dbdb7d-e14f-4971-b50b-1e5d7f5be816.png)
-![Screenshot_1682862621](https://user-images.githubusercontent.com/76970535/235358063-59d9b01c-1f8e-41c2-bf80-e150e72d122e.png)
+![Screenshot_1682862593](https://user-images.githubusercontent.com/76970535/235357928-e2a950ba-a0b6-4843-bc47-fd8e5fbf548d.png | width= 100)
+![Screenshot_1682862608](https://user-images.githubusercontent.com/76970535/235357942-51dbdb7d-e14f-4971-b50b-1e5d7f5be816.png | width= 100)
+![Screenshot_1682862621](https://user-images.githubusercontent.com/76970535/235358063-59d9b01c-1f8e-41c2-bf80-e150e72d122e.png | width= 100)
