@@ -29,3 +29,9 @@ And you can tester the app on this link https://appdistribution.firebase.dev/i/7
 <img src="https://user-images.githubusercontent.com/76970535/235358063-59d9b01c-1f8e-41c2-bf80-e150e72d122e.png" width=300 />
 </p>
 
+### The pages build by my self
+<p float="left">
+<img src="https://user-images.githubusercontent.com/76970535/235357928-e2a950ba-a0b6-4843-bc47-fd8e5fbf548d.png" width=300 />
+<img src="https://user-images.githubusercontent.com/76970535/235357942-51dbdb7d-e14f-4971-b50b-1e5d7f5be816.png" width=300 />
+<img src="https://user-images.githubusercontent.com/76970535/235358063-59d9b01c-1f8e-41c2-bf80-e150e72d122e.png" width=300 />
+</p>
