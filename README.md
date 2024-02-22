@@ -31,7 +31,12 @@ And you can tester the app on this link https://appdistribution.firebase.dev/i/7
 
 ### The pages build by my self
 <p float="left">
-  
+![Screenshot_2024-02-22-23-31-15-559_com example bwa_cozy](https://github.com/fadillahzx404/bwacozy/assets/76970535/7d075cc9-a358-413a-a3ca-630416ac5441)
+
+  ![Screenshot_2024-02-22-23-31-19-666_com example bwa_cozy](https://github.com/fadillahzx404/bwacozy/assets/76970535/4670d46d-4f28-48a4-98ec-5b11795e73b5)
+
+  ![Screenshot_2024-02-22-23-33-45-491_com example bwa_cozy](https://github.com/fadillahzx404/bwacozy/assets/76970535/e5554035-0bcf-49a8-96b6-63a322b78949)
+
 <img src="https://user-images.githubusercontent.com/76970535/235357928-e2a950ba-a0b6-4843-bc47-fd8e5fbf548d.png" width=300 />
 <img src="https://user-images.githubusercontent.com/76970535/235357928-e2a950ba-a0b6-4843-bc47-fd8e5fbf548d.png" width=300 />
 <img src="https://user-images.githubusercontent.com/76970535/235358063-59d9b01c-1f8e-41c2-bf80-e150e72d122e.png" width=300 />
