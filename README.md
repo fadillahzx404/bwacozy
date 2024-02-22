@@ -24,14 +24,14 @@ And you can tester the app on this link https://appdistribution.firebase.dev/i/7
 
 ### For the view of apps
 <p float="left">
-<img src="https://user-images.githubusercontent.com/76970535/235357928-e2a950ba-a0b6-4843-bc47-fd8e5fbf548d.png" width=300 />
-<img src="https://user-images.githubusercontent.com/76970535/235357942-51dbdb7d-e14f-4971-b50b-1e5d7f5be816.png" width=300 />
-<img src="https://user-images.githubusercontent.com/76970535/235358063-59d9b01c-1f8e-41c2-bf80-e150e72d122e.png" width=300 />
+<img src="https://user-images.githubusercontent.com/76970535/235357928-e2a950ba-a0b6-4843-bc47-fd8e5fbf548d.png" width=250 />
+<img src="https://user-images.githubusercontent.com/76970535/235357942-51dbdb7d-e14f-4971-b50b-1e5d7f5be816.png" width=250 />
+<img src="https://user-images.githubusercontent.com/76970535/235358063-59d9b01c-1f8e-41c2-bf80-e150e72d122e.png" width=250 />
 </p>
 
 ### The pages build by my self
 <p float="left">
-<img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/dc606f24-f5fa-4176-be61-fe3f49306c4d" width=300 />
-<img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/ebefc245-300b-49e7-9eec-bf32c0333699" width=300 />
-<img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/06a55610-c064-4b52-8f29-2eb730b5fb31" width=300 />
+<img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/dc606f24-f5fa-4176-be61-fe3f49306c4d" width=250 />
+<img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/ebefc245-300b-49e7-9eec-bf32c0333699" width=250 />
+<img src="https://github.com/fadillahzx404/bwacozy/assets/76970535/06a55610-c064-4b52-8f29-2eb730b5fb31" width=250 />
 </p>
